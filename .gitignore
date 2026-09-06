@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+/tmp/
+server.log
+supabase-result-*.json
+migration.json
+
+# Archives et artefacts locaux
+globalstudyrussia.rar
+supabase-migration.json

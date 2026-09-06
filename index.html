@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Study Russia</title>
+    <link rel="stylesheet" href="styles.css?v=20260905">
+    <link rel="icon" type="image/png" href="logo.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a class="logo" href="#accueil" aria-label="Global Study Russia - Accueil">
+                <div class="logo-circle">
+                    <img src="logo.jpeg" alt="Global Study Russia">
+                </div>
+                <span class="logo-brand">
+                    <strong>GLOBAL <em>STUDY</em></strong>
+                    <small>RUSSIA</small>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#accueil" class="nav-link active" data-page="accueil">Accueil</a></li>
+                <li><a href="#universites" class="nav-link" data-page="universites">Universités</a></li>
+                <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="#candidature" class="nav-link" data-page="candidature">Candidature</a></li>
+            </ul>
+            
+            <div class="nav-auth-links">
+                <a href="#inscription" class="btn-signup">
+                    S'inscrire <i class="fas fa-user-plus"></i>
+                </a>
+                <a href="#connexion" class="btn-login">
+                    Connexion <i class="fas fa-right-to-bracket"></i>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE ACCUEIL -->
+    <section id="accueil" class="page active">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-bg-image"></div>
+            <img class="crossing-plane" src="avion.png" alt="" aria-hidden="true">
+            <div class="hero-content">
+                <h1 class="hero-title">VOTRE AVENIR,<br>NOTRE DESTINATION</h1>
+                <p class="hero-subtitle">GLOBAL STUDY RUSSIA – Votre projet académique, notre accompagnement. 
+                Basé à Abidjan (Cocody Sainte-Marie), GLOBAL STUDY RUSSIA est le cabinet de référence dédié à 
+                tous les étudiants qui souhaitent franchir le pas et réussir leur projet d'études en Russie en 
+                toute sérénité. Conscient que s'expatrier pour se former est une décision audacieuse qui demande 
+                de l'assurance, notre structure s'engage à vos côtés pour transformer cette ambition en une réalité concrète.
+                 Notre objectif principal est de vous libérer du poids de la complexité administrative en vous offrant un 
+                 accompagnement humain, transparent et sur mesure de A à Z. De la sélection de filières adaptées et d'universités
+                  prestigieuses à Krasnodar jusqu'à votre installation finale sur place, nous mettons notre expertise, notre 
+                  proximité et notre réactivité au service de votre réussite. Grâce à un encadrement permanent — joignable aussi
+                   bien à Abidjan qu'en Russie —, nous sommes le partenaire de confiance qui sécurise chaque étape de votre
+                    parcours académique international.</p>
+                <div class="hero-buttons">
+                    <a href="#candidature" class="btn-primary" id="btn-start-candidature">
+                        Commencer ma candidature <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#universites" class="btn-secondary" id="btn-discover">
+                        Découvrir les universités <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-plane">
+                <i class="fas fa-plane"></i>
+                <svg class="plane-trail" viewBox="0 0 200 100">
+                    <path d="M0,80 Q100,0 200,50" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="5,5" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="25">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">universités partenaires</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">étudiants placés</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label">villes russes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">de visas obtenus</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps Section -->
+        <div class="steps-section">
+            <!-- Step 01 - Voyager -->
+            <div class="step-row step-left">
+                <div class="step-text-content">
+                    <div class="step-header">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h2 class="step-title">VOYAGER</h2>
+                            <p class="step-description">Vol, visa, accueil à l'aéroport :<br>on s'occupe de tout le trajet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-image-container">
+                    <div class="step-image step-image-1">
+                        <div class="step-img-overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 02 - Étudier -->
+            <div class="step-row step-right">
+                <div class="step-image-container">
+                    <div class="step-image step-image-2">
+                        <div class="step-img-overlay"></div>
+                    </div>
+                </div>
+                <div class="step-text-content step-text-right">
+                    <div class="step-header">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h2 class="step-title">ÉTUDIER</h2>
+                            <p class="step-description">Médecine, ingénierie, aéronautique…<br>des filières reconnues mondialement</p>
+                        </div>
+                    </div>
+                    <div class="step-accent-curve"></div>
+                </div>
+            </div>
+
+            <!-- Step 03 - Réussir -->
+            <div class="step-row step-left step-last">
+                <div class="step-text-content">
+                    <div class="step-header">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h2 class="step-title">RÉUSSIR</h2>
+                            <p class="step-description">Votre avenir, notre destination</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-cta-container">
+                    <a href="https://wa.me/2250173482777" target="_blank" rel="noopener" class="btn-primary btn-large">
+                        Demander une consultation gratuite <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <!-- FOOTER (visible uniquement sur la page Accueil) -->
+    <footer class="site-footer">
+        <div class="footer-main">
+
+            <!-- Colonne 1 : Logo + tagline -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-circle">
+                        <img src="logo.jpeg" alt="Global Study Russia">
+                    </div>
+                    <span class="footer-logo-name">
+                        <strong>GLOBAL <em>STUDY</em></strong>
+                        <small>RUSSIA</small>
+                    </span>
+                </div>
+                <p class="footer-tagline">Votre avenir, notre destination.<br>Accompagnement complet de A à Z.</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/2250173482777" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:gblstudyrussia@gmail.com" aria-label="Email" class="footer-social-btn email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-btn instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne 2 : Contact -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Contact</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <span class="footer-contact-label"><i class="fas fa-phone"></i> Tél. Côte d'Ivoire</span>
+                        <a href="tel:+2250173482777" class="footer-contact-link">+225 01 73 48 27 77</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-label"><i class="fas fa-phone"></i> Tél. Russie</span>
+                        <a href="tel:+79883639578" class="footer-contact-link">+7 988 363 95 78</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-label"><i class="fas fa-envelope"></i> Email</span>
+                        <a href="mailto:gblstudyrussia@gmail.com" class="footer-contact-link">gblstudyrussia@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-label"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                        <a href="https://wa.me/2250173482777" target="_blank" rel="noopener" class="footer-contact-link">Envoyer un message</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3 : Liens rapides -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Navigation</h3>
+                <ul class="footer-nav-list">
+                    <li><a href="#accueil" class="footer-nav-link nav-link" data-page="accueil">Accueil</a></li>
+                    <li><a href="#universites" class="footer-nav-link nav-link" data-page="universites">Universités</a></li>
+                    <li><a href="#services" class="footer-nav-link nav-link" data-page="services">Services</a></li>
+                    <li><a href="#candidature" class="footer-nav-link nav-link" data-page="candidature">Candidature</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 4 : Mentions légales -->
+            <div class="footer-col">
+                <h3 class="footer-col-title">Informations</h3>
+                <ul class="footer-nav-list">
+                    <li><a href="#" class="footer-nav-link">Mentions légales</a></li>
+                    <li><a href="#" class="footer-nav-link">Politique de confidentialité</a></li>
+                    <li><a href="#" class="footer-nav-link">Conditions générales</a></li>
+                    <li><a href="https://wa.me/2250173482777" target="_blank" rel="noopener" class="footer-nav-link">Contactez-nous</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright">GLOBAL STUDY RUSSIA &copy; 2026. Tous droits réservés.</span>
+            <span class="footer-made">Fait avec <i class="fas fa-heart" style="color: var(--red);"></i> pour les étudiants africains</span>
+        </div>
+    </footer>
+    </section>
+
+    <!-- PAGE UNIVERSITÉS -->
+    <section id="universites" class="page">
+        <div class="uni-hero">
+            <div class="uni-hero-bg"></div>
+            <div class="uni-hero-overlay"></div>
+            <div class="uni-hero-content">
+                <h1>Nos universités partenaires</h1>
+                <p>Trois universités prestigieuses, avec des opportunités de bourses gouvernementales</p>
+            </div>
+            <div class="uni-hero-decoration">
+                <svg viewBox="0 0 400 200" class="russian-stripes">
+                    <path d="M250,0 L400,0 L400,60 L300,60 Z" fill="white" opacity="0.3"/>
+                    <path d="M280,65 L400,65 L400,120 L320,120 Z" fill="#0039A6" opacity="0.3"/>
+                    <path d="M310,125 L400,125 L400,180 L340,180 Z" fill="#D52B1E" opacity="0.3"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Bourse gouvernementale -->
+        <section class="scholarship-intro" aria-labelledby="scholarship-title">
+            <div class="scholarship-intro-heading">
+                <div class="scholarship-intro-icon"><i class="fas fa-award"></i></div>
+                <div>
+                    <span class="scholarship-eyebrow">Bourse du gouvernement russe</span>
+                    <h2 id="scholarship-title">Le principe de la bourse</h2>
+                </div>
+            </div>
+            <p class="scholarship-intro-text">
+                Chaque année, la Russie propose des bourses aux étudiants étrangers via
+                <strong>education-in-russia.com</strong> et les centres culturels russes.
+                Elles permettent d'étudier dans des universités prestigieuses avec un coût fortement réduit.
+            </p>
+            <div class="scholarship-benefits">
+                <div class="scholarship-benefit">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div><strong>Études gratuites</strong><span>Frais de scolarité couverts pendant le cursus</span></div>
+                </div>
+                <div class="scholarship-benefit">
+                    <i class="fas fa-wallet"></i>
+                    <div><strong>Allocation mensuelle</strong><span>Une aide de subsistance pour l'étudiant</span></div>
+                </div>
+                <div class="scholarship-benefit">
+                    <i class="fas fa-building"></i>
+                    <div><strong>Résidence universitaire</strong><span>Logement à tarif très réduit</span></div>
+                </div>
+                <div class="scholarship-benefit scholarship-costs">
+                    <i class="fas fa-plane-departure"></i>
+                    <div><strong>À prévoir</strong><span>Vol, assurance santé et dépenses personnelles</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <div class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <span class="filter-label">Discipline</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="discipline" data-value="all">
+                            <i class="fas fa-graduation-cap"></i> Toutes les filières
+                        </button>
+                        <button class="filter-btn" data-filter="discipline" data-value="sciences">
+                            <i class="fas fa-flask"></i> Sciences
+                        </button>
+                        <button class="filter-btn" data-filter="discipline" data-value="sciences">
+                            <i class="fas fa-flask"></i> Informatique
+                        </button>
+                        <button class="filter-btn" data-filter="discipline" data-value="economie">
+                            <i class="fas fa-chart-line"></i> Économie & gestion
+                        </button>
+                        <button class="filter-btn" data-filter="discipline" data-value="droit">
+                            <i class="fas fa-scale-balanced"></i> Droit & société
+                        </button>
+                    </div>
+                </div>
+                <div class="filter-divider"></div>
+                <div class="filter-group">
+                    <span class="filter-label">Ville</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="ville" data-value="all">
+                            <i class="fas fa-map-marker-alt"></i> 
+                        </button>
+                        <button class="filter-btn" data-filter="ville" data-value="moscou">
+                            <i class="fas fa-map-marker-alt"></i> Moscou
+                        </button>
+                        <button class="filter-btn" data-filter="ville" data-value="krasnodar">
+                            <i class="fas fa-map-marker-alt"></i> Krasnodar
+                        </button>
+                    </div>
+                </div>
+                <div class="filter-divider"></div>
+                <div class="filter-group">
+                    <span class="filter-label">Langue d'enseignement</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="langue" data-value="russe">
+                            Russe
+                        </button>
+                        <button class="filter-btn" data-filter="langue" data-value="anglais">
+                            Anglais disponible
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- University Cards Grid -->
+        <div class="uni-grid">
+            <!-- Card 1 - MGU -->
+            <div class="uni-card" data-uni="mgu" data-discipline="sciences economie droit" data-ville="moscou" data-langue="russe anglais" onclick="openUniDetail('mgu')">
+                <div class="uni-card-image">
+                    <div class="uni-card-img" style="background-image: url('uni moscou.jpg'); background-color: #5a7a9a;"></div>
+                    <div class="uni-logo-badge">
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+                <div class="uni-card-content">
+                    <h3>MGU — Université d'État de Moscou</h3>
+                    <div class="uni-card-info">
+                        <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Moscou </span>
+                        <span class="uni-price">2 000 000--3 000 000 FCFA/ an</span>
+                    </div>
+                    <div class="uni-card-footer">
+                        <a href="#" class="link-fiche">Voir la fiche</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - KubSU -->
+            <div class="uni-card" data-uni="kubsu" data-discipline="sciences economie droit" data-ville="krasnodar" data-langue="russe" onclick="openUniDetail('kubsu')">
+                <div class="uni-card-image">
+                    <div class="uni-card-img" style="background-image: url('uni krasnador.jpg'); background-color: #8b4513;"></div>
+                    <div class="uni-logo-badge">
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+                <div class="uni-card-content">
+                    <h3>KubSU — Université d'État du Kouban</h3>
+                    <div class="uni-card-info">
+                        <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Krasnodar </span>
+                        <span class="uni-price">1 000 000--2 000 000 FCFA/ an</span>
+                    </div>
+                    <div class="uni-card-footer">
+                        <a href="#" class="link-fiche">Voir la fiche</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PAGE DETAIL UNIVERSITÉ -->
+    <section id="uni-detail" class="page">
+        <div class="detail-hero">
+            <div class="detail-hero-bg"></div>
+            <div class="detail-hero-overlay"></div>
+            <div class="detail-hero-content">
+                <div class="breadcrumb">
+                    <a href="#" class="back-link" id="back-to-uni"><i class="fas fa-arrow-left"></i> Retour</a>
+                    <span>/</span>
+                    <a href="#universites">Universités</a>
+                    <span>/</span>
+                    <span id="breadcrumb-name" data-kubsu="KubSU — Université d'État du Kouban">MGU — Université d'État de Moscou</span>
+                </div>
+                <h1 id="detail-title" data-kubsu="KubSU|Université d'État du Kouban">MGU<br>Université d'État de Moscou</h1>
+                <p id="detail-subtitle" class="detail-location" data-kubsu="Krasnodar · IT, gestion & sciences">Moscou · Sciences, IT & ingénierie</p>
+            </div>
+            <div class="detail-hero-stripes">
+                <svg viewBox="0 0 300 300" preserveAspectRatio="none">
+                    <path d="M200,0 L300,0 L300,100 L250,100 Z" fill="white" opacity="0.15"/>
+                    <path d="M220,105 L300,105 L300,200 L260,200 Z" fill="#0039A6" opacity="0.15"/>
+                    <path d="M240,205 L300,205 L300,300 L270,300 Z" fill="#D52B1E" opacity="0.15"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-grid">
+                <!-- Informations clés -->
+                <div class="detail-card info-card">
+                    <h2><span class="card-title-accent"></span>Informations clés</h2>
+                    <div class="info-list">
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="info-label">Filières</span>
+                            <span class="info-value" id="detail-filieres" data-kubsu="IT, économie, tourisme, langues, biologie, design, droit, relations internationales">Informatique, mathématiques, physique, aérospatiale, biologie, économie, droit</span>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fas fa-language"></i></div>
+                            <span class="info-label">Langue</span>
+                            <span class="info-value" id="detail-langue" data-kubsu="Russe · département préparatoire pour étrangers">Russe · quelques cursus en anglais</span>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <span class="info-label">Durée</span>
+                            <span class="info-value" id="detail-duree" data-kubsu="Préparatoire 1 an · Licence 4 ans · Master 2 ans">Préparatoire 1 an · Licence 4 ans · Master 2 ans</span>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <span class="info-label">Frais</span>
+                            <span class="info-value" id="detail-frais" data-kubsu="1 000 000–2 000 000 FCFA / an hors bourse">2 000 000 – 3 000 000 FCFA / an hors bourse</span>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fas fa-building"></i></div>
+                            <span class="info-label">Hébergement</span>
+                            <span class="info-value" id="detail-hebergement" data-kubsu="Résidence 17 000 FCFA / an · externe à partir de 20 000 FCFA / mois">Résidence 17 000 FCFA / an · externe à partir de 20 000 FCFA / mois</span>
+                        </div>
+                        <div class="info-row info-row-scholarship">
+                            <div class="info-icon"><i class="fas fa-award"></i></div>
+                            <span class="info-label">Bourse</span>
+                            <span class="info-value" id="detail-bourse" data-kubsu="Bourse gouvernementale : frais de scolarité couverts, allocation et logement à tarif réduit">Frais de scolarité couverts, allocation et résidence à tarif réduit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étapes d'admission -->
+                <div class="detail-card admission-card">
+                    <h2><span class="card-title-accent"></span>Étapes d'admission</h2>
+                    <div class="admission-steps">
+                        <div class="admission-step">
+                            <div class="step-circle">1</div>
+                            <div class="step-content">
+                                <strong>Dossier</strong>
+                                <p>Préparation et soumission des documents requis.</p>
+                            </div>
+                        </div>
+                        <div class="admission-step">
+                            <div class="step-circle">2</div>
+                            <div class="step-content">
+                                <strong>Admission</strong>
+                                <p>Évaluation du dossier et lettre d'acceptation.</p>
+                            </div>
+                        </div>
+                        <div class="admission-step">
+                            <div class="step-circle">3</div>
+                            <div class="step-content">
+                                <strong>Visa</strong>
+                                <p>Obtention du visa étudiant.</p>
+                            </div>
+                        </div>
+                        <div class="admission-step">
+                            <div class="step-circle">4</div>
+                            <div class="step-content">
+                                <strong>Départ</strong>
+                                <p data-kubsu="Préparation au départ et accueil à Krasnodar.">Préparation au départ et accueil à Moscou.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#candidature" class="btn-deposer" id="btn-deposer">
+                        Déposer mon dossier <i class="fas fa-calendar-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <!-- CTA Footer -->
+        <div class="detail-cta-section">
+            <div class="detail-cta-content">
+                <div>
+                    <h3>Prêt à commencer votre avenir en Russie ?</h3>
+                    <p>Nos conseillers vous accompagnent à chaque étape de votre projet.</p>
+                </div>
+                <a href="https://wa.me/2250173482777" target="_blank" rel="noopener" class="btn-conseiller">
+                    <i class="fas fa-comment-dots"></i> Parler à un conseiller <i class="fas fa-calendar-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE SERVICES -->
+    <section id="services" class="page">
+        <div class="services-hero">
+            <div class="services-hero-bg"></div>
+            <div class="services-hero-overlay"></div>
+            <div class="services-hero-content">
+                <h1>Nos Services</h1>
+                <p>Un accompagnement complet pour votre parcours en Russie</p>
+            </div>
+        </div>
+        <div class="services-content">
+            <section class="procedure-panel" aria-labelledby="procedure-title">
+                <div class="procedure-heading">
+                    <div>
+                        <span class="section-eyebrow">Votre parcours, étape par étape</span>
+                        <h2 id="procedure-title">Procédure complète</h2>
+                    </div>
+                    <div class="procedure-progress-label"><strong id="procedure-step-number">1</strong><span>/ 10</span></div>
+                </div>
+                <div class="procedure-progress" aria-hidden="true"><span id="procedure-progress-bar"></span></div>
+                <div class="procedure-timeline" role="tablist" aria-label="Étapes de la procédure">
+                    <button class="procedure-step active" type="button" role="tab" aria-selected="true" data-step="1"><span>01</span><strong>Choix de l'université</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="2"><span>02</span><strong>Constitution du dossier</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="3"><span>03</span><strong>Traduction et légalisation</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="4"><span>04</span><strong>Admission universitaire</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="5"><span>05</span><strong>Réception de l'invitation</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="6"><span>06</span><strong>Demande de visa</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="7"><span>07</span><strong>Départ vers la Russie</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="8"><span>08</span><strong>Accueil à l'aéroport</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="9"><span>09</span><strong>Installation au logement</strong></button>
+                    <button class="procedure-step" type="button" role="tab" aria-selected="false" data-step="10"><span>10</span><strong>Début des études</strong></button>
+                </div>
+                <div class="procedure-detail" id="procedure-detail">
+                    <span class="procedure-detail-number">01</span>
+                    <div><span class="section-eyebrow">Étape actuelle</span><h3 id="procedure-detail-title">Choix de l'université</h3><p id="procedure-detail-text">Nous vous aidons à sélectionner une université et une filière adaptées à votre projet.</p></div>
+                </div>
+            </section>
+
+            <section class="pricing-panel" aria-labelledby="pricing-title">
+                <div class="pricing-heading"><div><span class="section-eyebrow">Accompagnement complet</span><h2 id="pricing-title">700 000 FCFA</h2><p>De la constitution du dossier à votre installation en Russie.</p></div><div class="pricing-total-icon"><i class="fas fa-route"></i></div></div>
+                <div class="pricing-layout">
+                    <div class="pricing-steps">
+                        <article class="pricing-step"><span>1ère étape</span><strong>100 000 FCFA</strong><p>Ouverture du dossier et démarrage de la procédure.</p></article>
+                        <article class="pricing-step"><span>2ème étape</span><strong>200 000 FCFA</strong><p>Traitement du dossier et obtention de la lettre d'invitation.</p></article>
+                        <article class="pricing-step"><span>3ème étape</span><strong>400 000 FCFA</strong><p>Finalisation, visa et accompagnement à l'arrivée.</p></article>
+                    </div>
+                    <aside class="not-included"><span class="not-included-icon"><i class="fas fa-circle-exclamation"></i></span><h3>Non inclus</h3><p>À prévoir séparément dans votre budget.</p><ul><li>Billet d'avion</li><li>Logement</li><li>Assurance</li><li>Frais universitaires</li><li>Frais personnels</li></ul></aside>
+                </div>
+                <p class="pricing-note"><i class="fas fa-circle-info"></i> Tarification informative. Le paiement s'effectue directement auprès de notre agent. Aucun paiement en ligne n'est proposé.</p>
+            </section>
+        </div>
+    </section>
+
+    <!-- PAGE CANDIDATURE -->
+    <section id="candidature" class="page">
+        <div class="candidature-hero">
+            <div class="candidature-hero-bg"></div>
+            <div class="candidature-hero-overlay"></div>
+            <div class="candidature-hero-content">
+                <h1>Admission & Procédure</h1>
+                <p>Préparez votre dossier et déposez votre candidature en ligne</p>
+            </div>
+        </div>
+
+        <div class="candidature-content">
+            <!-- Documents requis -->
+            <div class="docs-section">
+                <h2><i class="fas fa-folder-open"></i> Documents Requis</h2>
+                <p class="docs-intro">Veuillez préparer les documents suivants pour la constitution de votre dossier :</p>
+                <div class="docs-grid">
+                    <div class="doc-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Collante BAC PDF</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>BAC Original</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Licence <small>(pour Master)</small></span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-passport"></i>
+                        <span>Passeport</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-notes-medical"></i>
+                        <span>Test VIH/SIDA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de candidature -->
+            <div class="form-section">
+                <h2><i class="fas fa-user-edit"></i> Formulaire de Candidature</h2>
+                <form id="candidature-form" class="candidature-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="date_naissance">Date de naissance *</label>
+                            <input type="date" id="date_naissance" name="date_naissance" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sexe">Sexe *</label>
+                            <select id="sexe" name="sexe" required>
+                                <option value="">Sélectionner</option>
+                                <option value="M">Masculin</option>
+                                <option value="F">Féminin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="nationalite">Nationalité *</label>
+                            <input type="text" id="nationalite" name="nationalite" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp">
+                        </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="pays">Pays de résidence *</label>
+                            <select id="pays" name="pays" required>
+                                <option value="">Sélectionner un pays</option>
+                                <option value="Cameroun">Cameroun</option>
+                                <option value="Cote d'Ivoire">Côte d'Ivoire</option>
+                                <option value="Senegal">Sénégal</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Burkina Faso">Burkina Faso</option>
+                                <option value="Togo">Togo</option>
+                                <option value="Benin">Bénin</option>
+                                <option value="Gabon">Gabon</option>
+                                <option value="Congo">Congo</option>
+                                <option value="RDC">RD Congo</option>
+                                <option value="Guinee">Guinée</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville de résidence *</label>
+                            <select id="ville" name="ville" required>
+                                <option value="">Sélectionnez d'abord un pays</option>
+                            </select>
+                            <input type="text" id="ville_autre" name="ville_autre" placeholder="Précisez votre ville" style="display:none; margin-top: 10px;">
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="niveau_actuel">Niveau actuel *</label>
+                            <select id="niveau_actuel" name="niveau_actuel" required>
+                                <option value="">Sélectionner</option>
+                                <option value="Terminale">En classe de Terminale</option>
+                                <option value="Bac">Niveau Baccalauréat</option>
+                                <option value="Licence 1">Licence 1</option>
+                                <option value="Licence 2">Licence 2</option>
+                                <option value="Licence 3">Licence 3</option>
+                                <option value="Master 1">Master 1</option>
+                                <option value="Master 2">Master 2</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="diplome_obtenu">Dernier diplôme obtenu</label>
+                            <select id="diplome_obtenu" name="diplome_obtenu">
+                                <option value="">Sélectionner</option>
+                                <option value="Aucun">Aucun</option>
+                                <option value="Bac">Baccalauréat</option>
+                                <option value="BTS">BTS / DUT</option>
+                                <option value="Licence">Licence</option>
+                                <option value="Master">Master</option>
+                                <option value="Doctorat">Doctorat</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialite">Spécialité actuelle (série du BAC ou filière)</label>
+                        <select id="specialite" name="specialite">
+                            <option value="">Sélectionner</option>
+                            <option value="Scientifique">Scientifique (Maths, Physique, C, D, S...)</option>
+                            <option value="Litteraire">Littéraire (A, L...)</option>
+                            <option value="Economique">Économique et Sociale (G, ES...)</option>
+                            <option value="Technique">Technique / Professionnelle</option>
+                            <option value="Informatique">Informatique / IT</option>
+                            <option value="Medecine">Médecine / Santé</option>
+                            <option value="Droit">Droit / Sciences Politiques</option>
+                            <option value="Gestion">Gestion / Management</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="universite_souhaitee">Université souhaitée</label>
+                            <select id="universite_souhaitee" name="universite_souhaitee">
+                                <option value="">Je ne sais pas encore</option>
+                                <option value="MGU">MGU — Université d'État de Moscou</option>
+                                <option value="KubSU">KubSU — Université d'État du Kouban</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filiere_souhaitee">Filière souhaitée en Russie *</label>
+                            <select id="filiere_souhaitee" name="filiere_souhaitee" required>
+                                <option value="">Sélectionner</option>
+                                <option value="Informatique">Informatique et IT</option>
+                                <option value="Medecine">Médecine et Santé</option>
+                                <option value="Ingenierie">Ingénierie (Civile, Mécanique, etc.)</option>
+                                <option value="Economie">Économie, Gestion et Finance</option>
+                                <option value="Mines">Mines et Pétrole</option>
+                                <option value="Aeronautique">Aéronautique / Aérospatiale</option>
+                                <option value="Droit">Droit / Relations Internationales</option>
+                                <option value="Langues">Langues et Traduction</option>
+                                <option value="Architecture">Architecture et Design</option>
+                                <option value="Autre">Autre (à préciser dans le message)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+                    <h3><i class="fas fa-upload"></i> Joindre des documents</h3>
+                    
+                    <div class="upload-grid">
+                        <div class="form-group">
+                            <label for="file_passeport">Passeport</label>
+                            <input type="file" id="file_passeport" name="file_passeport" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label for="file_bac">Baccalauréat</label>
+                            <input type="file" id="file_bac" name="file_bac" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label for="file_licence">Licence (pour Master)</label>
+                            <input type="file" id="file_licence" name="file_licence" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label for="file_cv">CV</label>
+                            <input type="file" id="file_cv" name="file_cv" accept=".pdf">
+                        </div>
+                        <div class="form-group">
+                            <label for="file_photo">Photo d'identité</label>
+                            <input type="file" id="file_photo" name="file_photo" accept=".jpg,.jpeg,.png">
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <div class="form-group">
+                        <label for="message">Message ou questions supplémentaires</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn-submit-form" id="submit-btn">
+                            Envoyer ma demande <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#accueil" class="mobile-link" data-page="accueil">Accueil</a></li>
+            <li><a href="#universites" class="mobile-link" data-page="universites">Universités</a></li>
+            <li><a href="#services" class="mobile-link" data-page="services">Services</a></li>
+            <li><a href="#candidature" class="mobile-link" data-page="candidature">Candidature</a></li>
+            <li><a href="https://wa.me/2250173482777" target="_blank" rel="noopener" class="btn-consultation mobile-consultation">Consultation gratuite <i class="fas fa-calendar-alt"></i></a></li>
+            <li><a href="#inscription" class="btn-signup mobile-auth-button">S'inscrire <i class="fas fa-user-plus"></i></a></li>
+            <li><a href="#connexion" class="btn-login mobile-auth-button">Connexion <i class="fas fa-right-to-bracket"></i></a></li>
+        </ul>
+    </div>
+
+    <script src="script.js?v=20260905"></script>
+</body>
+</html>
