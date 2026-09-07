@@ -409,7 +409,7 @@ function smoothTransition(callback) {
 }
 
 // ==========================================
-// FORM HANDLING - SUPABASE + FICHIERS RÉELS
+// FORM HANDLING - SUPABASE + WHATSAPP
 // ==========================================
 function initFormulaireSafe() {
     try {
@@ -420,6 +420,7 @@ function initFormulaireSafe() {
         const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_TSfAl9l2NowqTZal0QOvVw_PsC5azvz';
         const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
         const bucketName = 'global-study-russia-documents';
+        const whatsappNumber = '2250173482777';
         const fichierLabels = [
             { id: 'file_passeport', label: 'Passeport' },
             { id: 'file_bac', label: 'Baccalauréat' },
@@ -448,6 +449,7 @@ function initFormulaireSafe() {
             const candidatureId = crypto.randomUUID();
             const files = getFileEntries();
             const documents = [];
+            const whatsappWindow = window.open('about:blank', '_blank');
 
             statusDiv.className = 'form-status';
             statusDiv.textContent = '';
@@ -499,8 +501,56 @@ function initFormulaireSafe() {
                 });
                 if (insertError) throw insertError;
 
+                submitBtn.innerHTML = 'Préparation de WhatsApp... <i class="fas fa-spinner fa-spin"></i>';
+                const documentLines = [];
+                for (const document of documents) {
+                    const { data: signedData, error: signedError } = await supabaseClient.storage
+                        .from(bucketName)
+                        .createSignedUrl(document.path, 60 * 60 * 24 * 7);
+                    if (signedError || !signedData?.signedUrl) {
+                        documentLines.push(`- ${document.label} : ${document.name} (enregistré dans le dossier Supabase)`);
+                    } else {
+                        documentLines.push(`- ${document.label} : ${document.name}\n  Lien sécurisé valable 7 jours : ${signedData.signedUrl}`);
+                    }
+                }
+
+                const lignes = [
+                    'NOUVELLE CANDIDATURE — GLOBAL STUDY RUSSIA',
+                    '',
+                    `Nom : ${get('nom')}`,
+                    `Prénom : ${get('prenom')}`,
+                    `Date de naissance : ${get('date_naissance')}`,
+                    `Sexe : ${get('sexe')}`,
+                    `Nationalité : ${get('nationalite')}`,
+                    `Email : ${get('email')}`,
+                    `Téléphone : ${get('telephone')}`,
+                    `WhatsApp : ${get('whatsapp')}`,
+                    `Pays de résidence : ${get('pays')}`,
+                    `Ville de résidence : ${ville}`,
+                    `Niveau actuel : ${get('niveau_actuel')}`,
+                    `Dernier diplôme obtenu : ${get('diplome_obtenu')}`,
+                    `Spécialité actuelle : ${get('specialite')}`,
+                    `Université souhaitée : ${get('universite_souhaitee')}`,
+                    `Filière souhaitée : ${get('filiere_souhaitee')}`,
+                    '',
+                    'MESSAGE OU QUESTIONS SUPPLÉMENTAIRES :',
+                    get('message') || '(Aucun message complémentaire)',
+                    '',
+                    'DOCUMENTS ENREGISTRÉS :',
+                    ...(documentLines.length ? documentLines : ['Aucun document joint']),
+                    '',
+                    `Référence de candidature : ${candidatureId}`,
+                    'Les informations et les fichiers ont été enregistrés dans Supabase.',
+                ];
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lignes.join('\\n'))}`;
+                if (whatsappWindow && !whatsappWindow.closed) {
+                    whatsappWindow.location.href = whatsappUrl;
+                } else {
+                    window.location.href = whatsappUrl;
+                }
+
                 statusDiv.className = 'form-status success';
-                statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Votre demande et vos documents ont bien été envoyés. Nous vous contacterons prochainement.';
+                statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Votre dossier est enregistré. WhatsApp s’ouvre avec toutes les informations et les liens des documents.';
                 form.reset();
                 const villeSelect = document.getElementById('ville');
                 if (villeSelect) {
@@ -510,6 +560,7 @@ function initFormulaireSafe() {
                 const villeAutre = document.getElementById('ville_autre');
                 if (villeAutre) villeAutre.style.display = 'none';
             } catch (error) {
+                if (whatsappWindow && !whatsappWindow.closed) whatsappWindow.close();
                 console.error('Erreur d’envoi de candidature:', error);
                 statusDiv.className = 'form-status error';
                 statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> L’envoi a échoué. Vérifiez votre connexion et réessayez.';
