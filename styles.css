@@ -2343,9 +2343,14 @@ a {
 }
 
 @media (max-width: 900px) {
+    .nav-container {
+        gap: 0;
+        padding: 10px 18px;
+    }
+
     .logo {
         min-width: 0;
-        flex: 1 1 auto;
+        flex: 0 1 auto;
         gap: 8px;
     }
 
@@ -2353,6 +2358,7 @@ a {
         display: flex;
         min-width: 0;
         overflow: visible;
+        white-space: nowrap;
     }
 
     .logo-brand strong {
@@ -2379,6 +2385,8 @@ a {
 
     .hamburger {
         display: flex;
+        flex: 0 0 auto;
+        margin-left: auto;
     }
 
     .hero-title {
@@ -2386,15 +2394,36 @@ a {
     }
 
     .step-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+        min-height: 190px;
     }
 
     .step-image-container {
-        min-height: 250px;
+        min-height: 190px;
     }
 
     .step-row.step-right .step-image-container {
-        order: -1;
+        order: initial;
+    }
+
+    .step-text-content {
+        padding: 20px 5%;
+    }
+
+    .step-header {
+        gap: 9px;
+    }
+
+    .step-number {
+        font-size: 3.1rem;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+    }
+
+    .step-description {
+        font-size: 0.68rem;
     }
 
     .detail-cta-content {
@@ -2439,20 +2468,47 @@ a {
     }
 
     .hero-section {
-        height: 65vh;
-        min-height: 450px;
+        height: auto;
+        min-height: calc(100svh - 78px);
+        padding: 92px 0 42px;
+        align-items: flex-start;
+    }
+
+    .hero-bg-image {
+        position: absolute;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(1.75rem, 7.2vw, 2.35rem);
+        line-height: 1.08;
+        margin-bottom: 14px;
     }
 
     .hero-content {
-        padding: 0 25px;
+        padding: 0 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.82rem;
+        line-height: 1.52;
+        margin-bottom: 22px;
     }
 
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        flex: 1 1 0;
+        justify-content: center;
+        min-width: 0;
+        padding: 11px 10px;
+        font-size: 10.5px;
+        line-height: 1.2;
+        text-align: center;
     }
 
     .uni-grid {
@@ -2599,20 +2655,49 @@ a {
     }
 
     .logo-circle {
-        width: 52px;
-        height: 52px;
+        width: 50px;
+        height: 50px;
         flex-shrink: 0;
     }
 
     .logo-brand strong {
-        font-size: 11px;
-        letter-spacing: 0.7px;
+        font-size: clamp(9px, 3.1vw, 11px);
+        letter-spacing: 0.6px;
     }
 
     .logo-brand small {
         margin-top: 4px;
         font-size: 7px;
-        letter-spacing: 1.8px;
+        letter-spacing: 1.6px;
+    }
+
+    .step-row {
+        min-height: 175px;
+    }
+
+    .step-image-container {
+        min-height: 175px;
+    }
+
+    .step-text-content {
+        padding: 17px 5%;
+    }
+
+    .step-number {
+        font-size: 2.65rem;
+    }
+
+    .step-title {
+        font-size: 1.02rem;
+        margin-bottom: 4px;
+    }
+
+    .step-description {
+        font-size: 0.6rem;
+    }
+
+    .step-header {
+        gap: 7px;
     }
 
     .docs-section, .form-section {
