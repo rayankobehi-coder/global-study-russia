@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Study Russia</title>
-    <link rel="stylesheet" href="styles.css?v=20260908">
+    <link rel="stylesheet" href="styles.css?v=20260909">
     <link rel="icon" type="image/png" href="logo.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -257,7 +257,7 @@
             <div class="uni-hero-overlay"></div>
             <div class="uni-hero-content">
                 <h1>Nos universités partenaires</h1>
-                <p>Trois universités prestigieuses, avec des opportunités de bourses gouvernementales</p>
+                <p>Six universités partenaires, avec des opportunités de bourses gouvernementales</p>
             </div>
             <div class="uni-hero-decoration">
                 <svg viewBox="0 0 400 200" class="russian-stripes">
@@ -390,12 +390,60 @@
                     <h3>KubSU — Université d'État du Kouban</h3>
                     <div class="uni-card-info">
                         <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Krasnodar </span>
-                        <span class="uni-price">1 000 000--2 000 000 FCFA/ an</span>
+                        <span class="uni-price">800 000–1 100 000 FCFA / an</span>
                     </div>
                     <div class="uni-card-footer">
                         <a href="#" class="link-fiche">Voir la fiche</a>
                         <i class="fas fa-chevron-right"></i>
                     </div>
+                </div>
+            </div>
+
+            <!-- Card 3 - KubSAU -->
+            <div class="uni-card" data-uni="kubsau" data-discipline="agriculture sciences economie" data-ville="krasnodar" data-langue="russe" onclick="openUniDetail('kubsau')">
+                <div class="uni-card-image">
+                    <div class="uni-card-img" style="background-image: url('kubsau-campus.jpg'); background-color: #487052;"></div>
+                    <div class="uni-logo-badge"><i class="fas fa-seedling"></i></div>
+                </div>
+                <div class="uni-card-content">
+                    <h3>KubSAU — Université agraire d'État du Kouban</h3>
+                    <div class="uni-card-info">
+                        <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Krasnodar</span>
+                        <span class="uni-price">900 000–1 200 000 FCFA / an</span>
+                    </div>
+                    <div class="uni-card-footer"><a href="#" class="link-fiche">Voir la fiche</a><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <!-- Card 4 - KubSTU -->
+            <div class="uni-card" data-uni="kubstu" data-discipline="ingenierie informatique economie" data-ville="krasnodar" data-langue="russe" onclick="openUniDetail('kubstu')">
+                <div class="uni-card-image">
+                    <div class="uni-card-img" style="background-image: url('kubstu-campus.png'); background-color: #315d8c;"></div>
+                    <div class="uni-logo-badge"><i class="fas fa-gears"></i></div>
+                </div>
+                <div class="uni-card-content">
+                    <h3>KubSTU — Université d'État technologique du Kouban</h3>
+                    <div class="uni-card-info">
+                        <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Krasnodar</span>
+                        <span class="uni-price">800 000–1 250 000 FCFA / an</span>
+                    </div>
+                    <div class="uni-card-footer"><a href="#" class="link-fiche">Voir la fiche</a><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <!-- Card 5 - KubSMU -->
+            <div class="uni-card" data-uni="kubsmu" data-discipline="medecine sciences" data-ville="krasnodar" data-langue="russe" onclick="openUniDetail('kubsmu')">
+                <div class="uni-card-image">
+                    <div class="uni-card-img" style="background-image: url('kubsmu-campus.png'); background-color: #6987a8;"></div>
+                    <div class="uni-logo-badge"><i class="fas fa-user-doctor"></i></div>
+                </div>
+                <div class="uni-card-content">
+                    <h3>KubSMU — Université d'État de médecine du Kouban</h3>
+                    <div class="uni-card-info">
+                        <span class="uni-location"><i class="fas fa-map-marker-alt"></i> Krasnodar</span>
+                        <span class="uni-price">1 100 000–2 050 000 FCFA / an</span>
+                    </div>
+                    <div class="uni-card-footer"><a href="#" class="link-fiche">Voir la fiche</a><i class="fas fa-chevron-right"></i></div>
                 </div>
             </div>
 
@@ -751,6 +799,9 @@
                                 <option value="">Je ne sais pas encore</option>
                                 <option value="MGU">MGU — Université d'État de Moscou</option>
                                 <option value="KubSU">KubSU — Université d'État du Kouban</option>
+                                <option value="KubSAU">KubSAU — Université agraire d'État du Kouban</option>
+                                <option value="KubSTU">KubSTU — Université d'État technologique du Kouban</option>
+                                <option value="KubSMU">KubSMU — Université d'État de médecine du Kouban</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -829,6 +880,6 @@
         </ul>
     </div>
 
-    <script src="script.js?v=20260908" defer></script>
+    <script src="script.js?v=20260909" defer></script>
 </body>
 </html>

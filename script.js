@@ -111,10 +111,49 @@ const universityData = {
         filieres: 'IT, économie, tourisme, langues, biologie, design, droit, relations internationales',
         langue: 'Russe · département préparatoire pour étrangers',
         duree: 'Préparatoire 1 an · Licence 4 ans · Master 2 ans',
-        frais: '1 000 000–2 000 000 FCFA / an hors bourse',
-        hebergement: 'Cité U 10 000–33 000 FCFA / mois · externe 100 000–200 000 FCFA / mois',
-        bourse: 'Bourse gouvernementale : frais de scolarité couverts, allocation et logement à tarif réduit',
-        rentree: 'Département préparatoire : environ 800 000–1 000 000 FCFA / an hors bourse',
+        frais: '800 000–1 100 000 FCFA / an hors bourse',
+        hebergement: 'Résidence universitaire : 20 000 FCFA / mois',
+        bourse: 'Possibilité de candidater aux programmes de bourses gouvernementales russes selon les campagnes ouvertes',
+        rentree: 'Département préparatoire : environ 818 000 FCFA / an selon le tarif officiel publié',
+        depart: 'Krasnodar'
+    },
+    kubsau: {
+        name: "KubSAU\nUniversité agraire d'État du Kouban — I. T. Trubiline",
+        breadcrumb: "KubSAU — Université agraire d'État du Kouban",
+        location: 'Krasnodar · agriculture, ingénierie & économie',
+        filieres: 'Agronomie, médecine vétérinaire, ingénierie agricole, écologie, économie, gestion, informatique, droit',
+        langue: 'Russe · centre préparatoire pour étudiants étrangers',
+        duree: 'Préparatoire 1 an · Licence 4 ans · Spécialité 5 ans · Master 2 ans',
+        frais: '900 000–1 200 000 FCFA / an hors bourse',
+        hebergement: 'Résidence universitaire : 20 000 FCFA / mois',
+        bourse: 'Bourse gouvernementale possible pour les étudiants internationaux selon les quotas et critères en vigueur',
+        rentree: 'Rentrée généralement en septembre ; préparation linguistique disponible avant la formation principale',
+        depart: 'Krasnodar'
+    },
+    kubstu: {
+        name: "KubSTU\nUniversité d'État technologique du Kouban",
+        breadcrumb: "KubSTU — Université d'État technologique du Kouban",
+        location: 'Krasnodar · ingénierie, informatique & technologie',
+        filieres: 'Informatique, génie logiciel, construction, énergie, automatisation, chimie, pétrole, économie, gestion',
+        langue: 'Russe · département préparatoire pour étrangers',
+        duree: 'Préparatoire 1 an · Licence 4 ans · Master 2 ans',
+        frais: '800 000–1 250 000 FCFA / an hors bourse',
+        hebergement: 'Résidence universitaire : 20 000 FCFA / mois',
+        bourse: 'Bourse gouvernementale et places financées possibles selon les dispositifs d’admission internationaux',
+        rentree: 'Rentrée en septembre ; parcours préparatoire disponible pour renforcer le russe et les matières scientifiques',
+        depart: 'Krasnodar'
+    },
+    kubsmu: {
+        name: "KubSMU\nUniversité d'État de médecine du Kouban",
+        breadcrumb: "KubSMU — Université d'État de médecine du Kouban",
+        location: 'Krasnodar · médecine, pharmacie & santé',
+        filieres: 'Médecine générale, odontologie, pharmacie, pédiatrie, santé préventive, recherche biomédicale',
+        langue: 'Russe · préparation linguistique pour les étudiants étrangers',
+        duree: 'Préparatoire 11–17 mois · Spécialité 6 ans · Résidanat selon la spécialité',
+        frais: '1 100 000–2 050 000 FCFA / an hors bourse',
+        hebergement: 'Résidence universitaire : 20 000 FCFA / mois',
+        bourse: 'Admission sur quota ou concours de bourse possible selon les accords et campagnes de recrutement',
+        rentree: 'Rentrée médicale en septembre ; admission internationale avec examens de chimie, biologie et russe selon la campagne',
         depart: 'Krasnodar'
     }
 };
